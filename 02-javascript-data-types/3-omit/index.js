@@ -8,7 +8,7 @@ export const omit = (obj, ...fields) => {
     let object = Object.assign(obj);
     fields.forEach(el => {
         Object.entries(obj).forEach(i => {
-            if(i[0] === el) {
+            if(i.includes(el)) {
                 delete object[el];
             }
         })

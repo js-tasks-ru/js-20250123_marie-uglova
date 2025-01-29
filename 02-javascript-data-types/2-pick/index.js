@@ -8,7 +8,7 @@ export const pick = (obj, ...fields) => {
     const arr = [];
     fields.forEach(el => {
         Object.entries(obj).forEach(i => {
-            if(i[0] === el) {
+            if(i.includes(el)) {
                 arr.push(i);
             }
         })
